@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="feedback.css" rel="stylesheet" type="text/css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href='https://fontawesome.com/icons' rel='stylesheet'>
+        <title>Michigan Auto Spares</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="images/bgnone.png">
+        <script src="https://kit.fontawesome.com/cf6a7efb30.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+
+<!----------------------------------------------------------------------------------------------------------------->
+<div class="container"> 
+    <div class="header">
+        <a href="product.html" ><img src="images/bgnone.png" alt="logo" class="logo"></a>
+
+
+         <input type="checkbox" id="check">
+         <label for="check" class="icons">
+             <i class='bx bx-menu' id="menu-icon"></i>
+             <i class='bx bx-x' id="close-icon"></i>
+         </label>
+         <nav class="navbar">
+
+             <a href="product.html" ><i class='bx bx-home' id="navicon"> Home</i></a>
+             <a href="aboutus.html"><i class='bx bxs-user' id="navicon"> About Us</i></a>
+             <a href="feedback.html" ><i class='bx bx-message-rounded-dots' id="navicon"> Feedback</i></a>
+             <a href="product.html" ><i class='bx bxl-product-hunt' id="navicon"> Product</i></a>
+         </nav>
+
+         <div class="icon">
+            <div class="gaya">
+                <input type="search" placeholder="Search here ...">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+    </div>
+<!----------------------------------------------------------------------------------------------------------------->
+
+
+<main>
+    <h1>Customer Feedback </h1>
+    <form id="registrationForm" onsubmit="return validateRegistrationForm()">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required><br>
+        <label for="nic">NIC:</label>
+        <input type="text" id="nic" name="nic" required><br>
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" required></textarea><br>
+        <input type="submit" value="Submit">
+    
+</main>
+
+<!----------------------------------------------------------------------------------------------------------------->
+
+<div class="footerContainer">
+    <div class="social-icon">
+      <a target="_blank" href="https://www.facebook.com/login.php"><i class='bx bxl-facebook-circle'></i></a>
+      <a target="_blank" href="https://www.instagram.com/?hl=en"><i class='bx bxl-instagram-alt'></i></a>
+      <a target="_blank" href="https://www.bing.com/search?q=twitter&qs=ds&form=QBRE"><i class='bx bxl-twitter'></i></a>
+      <a target="_blank" href="https://www.reddit.com/?rdt=33477"><i class='bx bxl-reddit'></i></a>
+      <a target="_blank" href="https://www.tiktok.com/explore"><i class='bx bxl-tiktok'></i></a>
+    </div>
+    <div class="footerNav">
+      <div class="footerTitle">
+        <a href="product.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="aboutus.html">Contact Us</a>
+        <a href="product.html">Product</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+  </div>
+  <div class="footerBottom">
+    <p>Copyright &copy;2024 Designed by <span class="designer">Gayashan Balasooriya</span></p>
+  </div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------->
+
+<script src="feedback.js"></script>
+</body>
+</html>
