@@ -1,0 +1,76 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #2c2c2e;
+}
+
+.partner-section {
+    padding: 80px;
+}
+
+.our-partners h2 {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 65px;
+}
+
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+}
+
+figure {
+    text-align: center;
+}
+
+.pic img {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pic:hover img {
+    transform: scale(1.1);
+}
+
+.name a {
+    color: #0c0463;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .partner-logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pic img {
+        max-width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-logos {
+        grid-template-columns: 1fr;
+    }
+
+    .pic img {
+        max-width: 120px;
+        height: 120px;
+    }
+
+    .name a {
+        font-size: 1.1em;
+    }
+}

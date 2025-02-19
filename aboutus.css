@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    
+    min-height: 100vh;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    padding-top: 5rem;
+}
+/* - header - */
+
+.container{
+    height: 100vh;
+    width: 100%;
+
+}
+
+.text{
+    color: black;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, -1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+
+}
+
+.header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.904),transparent) ; 
+    transition: .5s;
+}
+
+.header:hover::after{
+    left: 100%;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+    border-radius: 1px;
+    margin: 0 .1px 0 .1px;
+}
+
+.navbar a{
+    font-size: 1.35rem;
+    padding: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 14px;
+    margin-left: 2.5rem;
+
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    right: 5%;
+    font-size: 3.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+}
+
+.navicon{
+    padding: 10px 10px 10px 10px;
+    
+}
+.icon{
+    padding: 0;
+    height: 2vh;
+    width: 2.5%;
+}
+
+form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 15px;
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #0d0b11;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover{
+    width: 300px;
+    cursor: pointer;
+}
+
+form:hover input{
+    display: block;
+}
+
+form:hover .fa{
+    background: #0d051d;
+    color: white;
+}
+
+
+
+
+
+@media (max-width:992px){
+    .html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width:768px){
+    
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, -1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, -1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        transition: 0.3s ease;
+    }
+
+    #check:checked~.navbar{
+        transform: translateY(0);
+       /* opacity: 1;
+        transition-delay: calc(.15s * var(--i));*/
+    }
+}
+
+
+/* For large screens (desktop) */
+@media screen and (max-width: 1200px) {
+    .icon input[type="search"] {
+        width: 250px;
+    }
+}
+
+/* For tablets and small laptops */
+@media screen and (max-width: 768px) {
+    .icon input[type="search"] {
+        width: 200px;
+    }
+
+    .icon i.fa-search {
+        right: 1px;
+    }
+
+    .icon{
+        padding: 0%;
+        margin-right: 45%;
+        height: .5vh;
+        width: 1%;
+    }
+}
+
+/* For mobile screens */
+@media screen and (max-width: 480px) {
+    .icon input[type="search"] {
+        width: 150px;
+    }
+
+    .icon i.fa-search {
+        right: 1px;
+    }
+    .icon{
+        padding: 0%;
+        margin-right: 25%;
+        height: .1vh;
+        width: 1px;
+    }
+}
+
+/* - end header - */
+
+
+/* Default styling for larger screens (above 1024px) */
+
+.about {
+    text-align: center;
+    padding: 20px;
+}
+.about h1{
+    font-size: 48px;
+    color: aliceblue;
+}
+
+.vission, .mission, .achivement {
+    margin-bottom: 32px;
+    color: #5d0505;
+}
+
+.vission h2, .mission h2, .achivement h2 {
+    font-size: 31px;
+    margin-bottom: 10px;
+    color: #eaeaea;
+}
+
+.vission p, .mission p, .achivement p {
+    font-size: 18px;
+    background-color: #e96336;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Media Queries for smaller devices */
+
+/* Tablets and small desktops (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .about h1{
+        margin-top: 32px;
+    }
+    .vission h2, .mission h2, .achivement h2 {
+        font-size: 27px;
+    }
+
+    .vission p, .mission p, .achivement p {
+        font-size: 19px;
+        padding: 12px;
+    }
+}
+
+/* Phones and smaller tablets (between 480px and 768px) */
+@media (max-width: 768px) {
+    .about h1{
+        margin-top: 28px;
+    }
+    .vission h2, .mission h2, .achivement h2 {
+        font-size: 25px;
+    }
+
+    .vission p, .mission p, .achivement p {
+        font-size: 17px;
+        padding: 10px;
+    }
+}
+
+/* Very small devices (below 480px) */
+@media (max-width: 480px) {
+    .vission h2, .mission h2, .achivement h2 {
+        font-size: 20px;
+    }
+
+    .vission p, .mission p, .achivement p {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .about {
+        padding: 10px;
+    }
+}
+
+/* - footer- */
+
+.footer {
+    background-color: #7a7a8c;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 30px 60px 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.social-icon a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.social-icon a i {
+    font-size: 2em;
+    color: #201c29;
+    opacity: 0.9;
+}
+
+.social-icon a:hover {
+    background-color: #201c29;
+    transition: 0.3s;
+}
+
+.social-icon a:hover i {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin-top: 5px;
+}
+
+.footerNav .footerTitle a {
+    color: #ffffff;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav .footerTitle a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    color: aliceblue;
+    padding: 24px;
+    text-align: center;
+}
+
+.footerNav {
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Tablets (landscape and portrait) */
+@media (max-width: 1024px) {
+    .footerContainer {
+        padding: 50px 20px 10px;
+    }
+
+    .social-icon {
+        flex-wrap: wrap;
+    }
+
+    .social-icon a {
+        margin: 5px;
+        padding: 8px;
+    }
+
+    .social-icon a i {
+        font-size: 1.5em;
+    }
+
+    .footerNav .footerTitle a {
+        font-size: 1.1rem;
+        margin: 10px;
+    }
+}
+
+/* Mobile Devices (portrait) */
+@media (max-width: 768px) {
+    .footerContainer {
+        padding: 30px 15px 10px;
+    }
+
+    .social-icon {
+        flex-direction: column;
+    }
+
+    .social-icon a {
+        margin: 5px auto;
+    }
+
+    .footerNav .footerTitle a {
+        font-size: 1rem;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footerBottom {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 480px) */
+@media (max-width: 480px) {
+    .footerContainer {
+        padding: 20px 10px;
+    }
+
+    .social-icon a {
+        padding: 8px;
+        margin: 5px;
+    }
+
+    .social-icon a i {
+        font-size: 1.2em;
+    }
+
+    .footerNav .footerTitle a {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    .footerBottom {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
+
